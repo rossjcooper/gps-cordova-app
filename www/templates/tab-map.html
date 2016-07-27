@@ -1,0 +1,13 @@
+<ion-view view-title="Map">
+  <ion-content class="padding">
+    <div id="map" data-tap-disabled="true"></div>
+    <div class="map-buttons">
+      <button class="button button-block button-balanced" ng-hide="clocked_in" ng-click=clockIn()>
+        Clock In
+      </button>
+      <button class="button button-block button-assertive" ng-show="clocked_in" ng-click=clockOut()>
+        Clock Out
+      </button>
+    </div>
+  </ion-content>
+</ion-view>
