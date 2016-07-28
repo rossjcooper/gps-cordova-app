@@ -1,6 +1,9 @@
 <ion-view view-title="Map">
   <ion-content class="padding">
     <div id="map" data-tap-disabled="true"></div>
+    <div>
+    Your Location {{latLng}}
+    </div>
     <div class="map-buttons">
       <button class="button button-block button-balanced" ng-hide="clocked_in" ng-click=clockIn()>
         Clock In
