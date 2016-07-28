@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ionicframework.gpsapp357752" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>GPS App</name>
-  <description>
-        
+  <description>&#xD;
+        &#xD;
     </description>
-  <author email="therossjcooper@gmail.com" href="http://www.ross-cooper.co.uk/">
-      Ross Cooper
+  <author email="therossjcooper@gmail.com" href="http://www.ross-cooper.co.uk/">&#xD;
+      Ross Cooper&#xD;
     </author>
   <content src="index.html"/>
   <access origin="*"/>
@@ -20,7 +20,7 @@
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
-  <allow-navigation href="*" />
+  <allow-navigation href="*"/>
   <platform name="android">
     <icon src="resources/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
     <icon src="resources/android/icon/drawable-mdpi-icon.png" density="mdpi"/>

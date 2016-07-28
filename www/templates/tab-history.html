@@ -1,0 +1,21 @@
+<ion-view view-title="History">
+  <ion-content>
+  <div ng-show="logs.length">
+  <ion-toggle ng-model="shouldShowDelete">
+  Show Remove
+</ion-toggle>
+    <ion-list type="card" can-swipe="true" show-delete="shouldShowDelete">
+      <ion-item class="item-icon-left" ng-repeat="log in logs track by $index" type="item-text-wrap">
+      <i class="icon ion-ios-location"></i>
+      Duration: {{log.end.time | amDifference : log.start.time : 'seconds' | amDurationFormat : 'second' }}
+      <br/>
+        <small>Ended: {{log.end.time | amCalendar}}</small>
+        <ion-delete-button class="ion-minus-circled" ng-click="deleteLog($index)"></ion-delete-button>
+      </ion-item>
+    </ion-list>
+    </div>
+    <div ng-hide="logs.length" class="bar bar-header bar-assertive">
+        <span class="title">No history to display</span>
+    </div>
+  </ion-content>
+</ion-view>
