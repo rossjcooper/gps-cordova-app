@@ -89,14 +89,14 @@ $scope.positionSuccess = function(position){
   $ionicPlatform.ready(function() {
     //Initialise map
     $scope.initMap();
-  });
 
-//Once map is idle and ready
-google.maps.event.addListenerOnce($scope.map, 'idle', function(){
+    //Once map is idle and ready
+    google.maps.event.addListenerOnce($scope.map, 'idle', function(){
   //Start watching position once map is ready
   console.log('Map ready');  
   $scope.watchPosition();  
 });
+  });
 
 })
 
