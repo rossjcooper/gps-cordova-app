@@ -1,18 +1,21 @@
-<ion-view view-title="Map">
+<ion-view view-title="Job">
   <ion-content class="padding">  
-    <div id="map" data-tap-disabled="true"></div>
-    <div class="row">
-      <div class="title" ng-show="logs[logs.length - 1].end.time && !clocked_in" >Last clocked out {{logs[logs.length - 1].end.time | amCalendar}}</div>    
-      <div class="title" ng-show="log.start.time && ! log.end.time">Clocked in <span am-time-ago="log.start.time"></span></div>
-      <div class="title" ng-show="!logs.length && !clocked_in">Please clock in...</div>
-    </div>
+    <div id="map" data-tap-disabled="true"></div>    
     <div class="map-buttons">
-      <button class="button button-block button-balanced" ng-hide="log.start.time" ng-click=clockIn()>
-        <i class="icon ion-ios-stopwatch-outline"></i> Start
-      </button>
-      <button class="button button-block button-assertive" ng-show="log.start.time" ng-click=clockOut()>
-        <i class="icon ion-stop"></i> Stop
-      </button>
-    </div>        
+      <div class="list list-inset">
+        <label class="item item-input">
+          <i class="icon ion-cube placeholder-icon"></i>
+          <input type="text" placeholder="Job Reference" ng-model="log.job" ng-disabled="log.start.time">
+        </label>
+      </div>
+      <div>
+        <button class="button button-block button-balanced" ng-hide="log.start.time" ng-click=clockIn()>
+          <i class="icon ion-ios-stopwatch-outline"></i> Start
+        </button>
+        <button class="button button-block button-assertive" ng-show="log.start.time" ng-click=clockOut()>
+          <i class="icon ion-stop"></i> Stop
+        </button>
+      </div>
+    </div> 
   </ion-content>
 </ion-view>

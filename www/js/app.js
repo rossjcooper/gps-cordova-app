@@ -32,7 +32,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
   $stateProvider
 
   // setup an abstract state for the tabs directive
-    .state('tab', {
+  .state('tab', {
     url: '/tab',
     abstract: true,
     templateUrl: 'templates/tabs.html'
@@ -46,29 +46,28 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
       'tab-map': {
         templateUrl: 'templates/tab-map.html',
         controller: 'MapCtrl'
-      }
+      }      
     }
   })
 
   .state('tab.history', {
-      url: '/history',
-      views: {
-        'tab-history': {
-          templateUrl: 'templates/tab-history.html',
-          controller: 'HistoryCtrl'
-        },
-        reload : true
+    url: '/history',
+    views: {
+      'tab-history': {
+        templateUrl: 'templates/tab-history.html',
+        controller: 'HistoryCtrl'
       }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
+    }
+  })
+  .state('tab.chat-detail', {
+    url: '/chats/:chatId',
+    views: {
+      'tab-chats': {
+        templateUrl: 'templates/chat-detail.html',
+        controller: 'ChatDetailCtrl'
       }
-    })
+    }
+  })
 
   .state('tab.account', {
     url: '/account',
