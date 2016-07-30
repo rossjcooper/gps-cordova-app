@@ -5,7 +5,7 @@
   Show Remove
 </ion-toggle>
     <ion-list type="card" can-swipe="true" show-delete="shouldShowDelete">
-      <ion-item class="item-icon-left" ng-repeat="log in logs | orderBy: log.start.time track by $index" type="item-text-wrap">
+      <ion-item class="item-icon-left" ng-repeat="log in logs | orderBy: log.start.time : true track by $index" type="item-text-wrap">
       <i class="icon ion-ios-location"></i> 
       <h2>Job: {{log.job}}</h2>
       Duration: {{log.end.time | amDifference : log.start.time : 'seconds' | amDurationFormat : 'second' }}
