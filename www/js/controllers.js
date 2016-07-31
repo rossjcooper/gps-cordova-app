@@ -5,7 +5,13 @@ angular.module('starter.controllers', [])
     $scope.$storage = $localStorage;
     $scope.position = { lat: 0, lng : 0};
     $scope.logs = $localStorage.logs || [];
-    $scope.log = $scope.logs[0] || {};
+    $scope.log = {};
+
+    if($scope.logs[$scope.logs.length -1]){
+      if(! $scope.logs[$scope.logs.length -1].end){
+        $scope.log = $scope.logs[$scope.logs.length -1];
+      }
+    }
 
   //Performs the clock in function
   $scope.clockIn = function(){
